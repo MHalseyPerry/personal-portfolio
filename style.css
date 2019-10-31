@@ -84,6 +84,7 @@ body {
     max-width: 40%;
     display: block;
     height:auto;
+    object-fit: contain;
 }
 
 .icon:hover {
