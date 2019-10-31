@@ -1,0 +1,94 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--font);
+    color:hsla(176, 84%, 95%, 1);
+    position: absolute;
+    display:flex;
+
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 1.4;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    min-height: 100vh;
+}
+
+.wrapper > * {
+    padding: 20px;
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+}
+
+.social a{
+    text-decoration: none;
+}
+
+.social .icon{
+    margin:0.7rem;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .projects{
+    padding-top:2rem;
+}
+
+.projects .project{
+    display:flex;
+    padding:1rem;
+    margin-top:1rem;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.projects .project h2{
+    line-height: 1;
+    margin-bottom:1rem;
+}
+
+.project-content{
+    display:flex;
+    align-content: center;
+    justify-content:  center;
+}
+
+.project-content p {
+    margin-left: 1rem;
+}
+
+.icon:hover {
+    opacity: .6;
+}
+
+#glslCanvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:-1;
+}​
+
