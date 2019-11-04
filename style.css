@@ -81,7 +81,7 @@ body {
 }
 
 .project-image{
-    max-width: 40%;
+    width: 40%;
     display: block;
     height:auto;
     object-fit: contain;
