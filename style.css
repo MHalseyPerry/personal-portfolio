@@ -12,7 +12,6 @@ body {
     font-size: 16px;
     font-family: var(--font);
     color:hsla(176, 84%, 95%, 1);
-    position: absolute;
     display:flex;
 
     min-height: 100vh;
@@ -25,12 +24,8 @@ body {
 .wrapper{
     display: flex;
     flex-direction: column;
-    padding: 4rem;
+    max-width: 1200px;
     min-height: 100vh;
-}
-
-.wrapper > * {
-    padding: 20px;
 }
 
 .header{
@@ -50,6 +45,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.main .about h1{
+    margin-bottom: .5rem;
 }
 
 .main .projects{
@@ -72,19 +71,28 @@ body {
 
 .project-content{
     display:flex;
-    align-content: center;
-    justify-content:  center;
+    justify-content:  space-between;
 }
 
-.project-content p {
-    margin-left: 1rem;
+.project:nth-child(even) .project-content{
+    flex-direction: row-reverse;
+}
+
+.project-info {
+    width: calc(60% - 1rem);
 }
 
 .project-image{
+    border-radius: 5px;
     width: 40%;
     display: block;
     height:auto;
     object-fit: contain;
+}
+
+.project-image-clicked{
+    z-index: 2;
+    width: 60%;
 }
 
 .icon:hover {
@@ -92,10 +100,9 @@ body {
 }
 
 #glslCanvas {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index:-1;
 }​
-
