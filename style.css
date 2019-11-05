@@ -5,7 +5,7 @@
 }
 
 :root {
-    --font: 'Montserrat', sans-serif;
+    --font:'Montserrat', sans-serif;
 }
 
 body {
@@ -24,8 +24,10 @@ body {
 .wrapper{
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 1800px;
     min-height: 100vh;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .header{
@@ -74,7 +76,11 @@ body {
     justify-content:  space-between;
 }
 
-.project:nth-child(even) .project-content{
+.project-content #mobile {
+    display:none;
+}
+
+.project:nth-child(odd) .project-content{
     flex-direction: row-reverse;
 }
 
@@ -99,10 +105,30 @@ body {
     opacity: .6;
 }
 
-#glslCanvas {
+#glslCanvas{
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    z-index:-1;
-}​
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+@media (max-width: 960px){
+    .project-content{
+        flex-direction: column !important;
+    }
+    .project-info{
+        width: 100%;
+    }
+    .project-info #desktop{
+        display:none
+    }
+    .project-content #mobile {
+        display:block;
+    }
+
+    .project-image{
+        width:100%;
+    }
+}
