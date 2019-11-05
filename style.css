@@ -131,4 +131,12 @@ body {
     .project-image{
         width:100%;
     }
+
+    body{
+        background:black;
+    }
+
+    #glslCanvas{
+        display:none;
+    }
 }
